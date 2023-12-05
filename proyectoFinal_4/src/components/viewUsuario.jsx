@@ -58,33 +58,12 @@ const Users = ({ onLogout }) => {
     }
   };
 
-  //   const handleDelete1=(docente_id)=>{
-  //     Swal.fire({
-  //       title: "Estas Seguro?",
-  //       text: "No podras recuperar la informacion",
-  //       icon: "warning",
-  //       showCancelButton: true,
-  //       confirmButtonColor: "#3085d6",
-  //       cancelButtonColor: "#d33",
-  //       confirmButtonText: "Eliminar"
-  //     }).then((result) => {
-  //       if (result.isConfirmed) {
-  //          Swal.fire( handleDelete(docente_id))
-  //          if (handleDelete) {
-  //           Swal.fire({
-  //             title: "Eliminado!",
-  //             text: "El registro ha sido eliminado.",
-  //             icon: "success"
-  //           });
-  //          }
-  //       }
-  //     });
-  //    }
+
 
   const handleDelete = async (id_usuario) => {
     try {
       await axios.delete(`${API_URL}/usuarios/${id_usuario}`);
-      // Actualizar la lista de estudiantes después de la eliminación
+      
       fetchData();
     } catch (error) {
       console.error("Error deleting Usuario:", error);
@@ -169,7 +148,7 @@ const Users = ({ onLogout }) => {
     }
   };
 
-  //   // alert Agregar Docentes//
+  
 
   const handleStore1 = () => {
     Swal.fire({
@@ -232,13 +211,13 @@ const Users = ({ onLogout }) => {
       <div className="flex justify-center flex-col items-center">
         <div className="bg-gray-800  text-white flex justify-around h-[3vh] w-cover items-center "></div>
         <div className="flex  p-[1rem] w-[75vw]  items-center ">
-          <h1 className=" text-2xl  px-[2.5rem] w-96 ">Lista de Usuarios</h1>
+          <h1 className=" text-3xl   w-[400px] font-bold ">Lista de Usuarios</h1>
 
-          <div className="flex pl-80 gap-x-4 items-center ">
+          <div className="flex pl-60 gap-x-4 items-center ">
             <div className="flex  ">
               <button
                 onClick={() => handlOpenModal()}
-                className="px-4 py-2 w-40 font-medium text-white bg-blue-800 rounded-md hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue active:bg-blue-600 transition duration-150 ease-in-out"
+                className="px-4 py-2 w-40 font-sans text-white bg-gray-800 rounded-md hover:bg-blue-900 focus:outline-none focus:shadow-outline-blue active:bg-blue-600 transition duration-150 ease-in-out"
               >
                 Agregar Usuario
               </button>
