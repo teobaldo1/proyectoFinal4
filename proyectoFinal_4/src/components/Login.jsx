@@ -4,7 +4,7 @@ function Login({ handleInputChange, handleSubmit, dataUsuario }) {
       <div className="  flex justify-center items-center gap-6">
       <div className="flex flex-col  items-center" >
         <h1 className="text-6xl font-sans font-semibold pb-6">JWT Authentication</h1>
-        <img src="../public/programador1.jpg" alt="" className="h-[400px] W-[200px] shadow-2xl" /></div>
+        <img src="/programador1.jpg" alt="" className="h-[400px] W-[200px] shadow-2xl" /></div>
     <div className="flex flex-col  h-[250px] w-[400px] bg-white rounded-md shadow-2xl border-[1px] border-gray-300 gap-y-10">
       <form
       onSubmit={handleSubmit}
