@@ -19,7 +19,7 @@ class BitacoraFactory extends Factory
        
         return [
             'bitacora'=>fake()->text(),
-            'id'=>fake()->numberBetween(1,10),
+            'id_usuario'=>fake()->numberBetween(1,10),
             'fecha'=>fake()->date(),
             'hora'=>fake()->date(),
             'ip'=>fake()->phoneNumber(),
